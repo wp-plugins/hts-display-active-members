@@ -12,7 +12,7 @@ Displays most recently logged in members and optionally link to Private Message 
 
 == Description ==
 
-Allows a page or post to display the most recently logged in members with how log since they last did any activity on the site. Options include showing a link to Private Message the member if logged in, the field to display as the members name and so on. 
+Allows a page or post to display the most recently logged in members with how long since they last did any activity on the site. Options include showing a link to Private Message the member if logged in, the field to display as the members name and so on. 
 
 A live demonstration is available at [BlueFlipper Diving](http://www.blueflipperdiving.co.uk/ "Where Scuba Divers Go Online!")
 
@@ -65,11 +65,13 @@ All options:
 To call it with a shortcode, put the following in a page or post:
 
   `[hts-displaymembers]`
+  
 
 To add options as in the description, pass as parameters.
 See plug-in description for all options. eg:
 
   `[hts-displaymembers count=10 display=user_nicename]`
+
 
 
 *Including in a theme*
