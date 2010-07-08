@@ -8,11 +8,13 @@ Requires at least: 2.8
 Tested up to: 3.0
 Stable tag: 0.1
 
-Displays most recently logged in members and link to PM if logged in
+Displays most recently logged in members and optionally link to Private Message if logged in
 
 == Description ==
 
 Allows a page or post to display the most recently logged in members with how log since they last did any activity on the site. Options include showing a link to Private Message the member if logged in, the field to display as the members name and so on. 
+
+A live demonstration is available at [BlueFlipper Diving](http://www.blueflipperdiving.co.uk/ "Where Scuba Divers Go Online!")
 
 All options:
 
@@ -77,6 +79,10 @@ To call it from within a theme, you have to wrap it in this PHP function:
 `<?php echo do_shortcode('[hts-displaymembers count="10" field="display_name"]'); ?>`
 
 
+== Screenshots ==
+
+1. Screenshot of a recent active member list
+2. Bigger screenshot showing within a larger page
 
 == Frequently Asked Questions ==
 
