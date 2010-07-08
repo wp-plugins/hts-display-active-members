@@ -3,7 +3,7 @@ Author: Simon Goodchild
 Contributors: Simon Goodchild
 Donate link: http://www.htsweb.net
 Link: http://www.htsweb.net/projects/plug-ins
-Tags: members, order
+Tags: recent, latest, active, members, buddypress
 Requires at least: 2.8
 Tested up to: 3.0
 Stable tag: 0.1
