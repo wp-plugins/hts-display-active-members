@@ -1,0 +1,8 @@
+   /* First line (name) */
+   #hts_displaymembers li h2 { margin: 1px 0px 10px 0px; }
+   #hts_displaymembers li h2 a { text-decoration: none; }
+   
+   /* Avatar image in list item */
+   #hts_displaymembers li img { margin-right: 10px; }
+   /* Email icon image in second line of list item */
+   #hts_displaymembers li .lastactive img { margin: 0px 0px 0px 10px; }
