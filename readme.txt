@@ -6,11 +6,13 @@ Link: http://www.htsweb.net/projects/plug-ins
 Tags: recent, latest, active, members, buddypress
 Requires at least: 2.8
 Tested up to: 3.0
-Stable tag: 0.1
+Stable tag: 0.2
 
-Displays most recently logged in members and optionally link to Private Message if logged in
+Displays most recently logged in members and optionally link to Private Message if logged in. Requires BuddyPress.
 
 == Description ==
+
+Requires BuddyPress.
 
 Allows a page or post to display the most recently logged in members with how long since they last did any activity on the site. Options include showing a link to Private Message the member if logged in, the field to display as the members name and so on. 
 
@@ -113,6 +115,12 @@ A. Create a folder in your theme called hts-display-members. In that folder, cre
 
 First version, no changes yet
 
+= 0.2 =
+
+1. Added check for BuddyPress installation
+2. Fixed debug check for stylesheet availability
+3. Updated readme to state BuddyPress is required
+
 == Upgrade Notice ==
 
-Not applicable until there is a new version!
+See change log.

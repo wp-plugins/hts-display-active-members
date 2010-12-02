@@ -45,7 +45,7 @@ function display_members($array) {
 
 	// Start recording HTML
 	$html = '';
-	
+
 	// If debugging show info
 	if ($debug == 'true') {
 		
@@ -56,76 +56,85 @@ function display_members($array) {
 		$html .= 'usemeta='.$usemeta.'<br />';
 		$html .= 'WP_PLUGIN_URL='.WP_PLUGIN_URL.'<br />';
 		$html .= 'WP_PLUGIN_DIR='.WP_PLUGIN_DIR.'<br />';
-	    $myStyleFile = STYLESHEETPATH . '/hts-display-members/hts-display-members.css';
+	    $myStyleFile = WP_PLUGIN_DIR . '/hts-display-active-members/hts-display-members.css';
 		$html .= 'STYLESHEETPATH='.$myStyleFile;
 	   	if ( file_exists($myStyleFile) ) { $html .= ' (Exists)'; } else { $html .= ' (Not Found)'; }
 		$html .= '<br />';
 		$html .= '<br /><strong>Results:</strong><br /><br />';
 	}
-	
-	// Start list
-	$html .= '<ul id="hts_displaymembers" style="list-style-type:none">';
-	foreach ($result as $row) {
-		
-		// Start item, and first line of HTML
-      	$html .= '<li style="overflow: hidden"><a href="'.$row->user_url.'">'.get_avatar($row->ID, $avatar_size).'</a>';
-      	if ($usemeta == 'true') {
-      		$sql = 'SELECT meta_value FROM '.$meta.' WHERE user_id = '.$row->ID.' AND meta_key = "'.$display.'"';
-  				$meta_result = $wpdb->get_results($sql);
-	      	$show = $meta_result[0]->meta_value;
-      	} else {
-	      	$show = $row->$display;
-      	}
-      	$html .= '<h2><a href="'.$row->user_url.'">'.$show.'</a></h2>';
 
-		// Calculate various times since last activity
-		$second = 1; 
-		$minute = $second*60; 
-		$hour = $minute*60; 
-		$day = $hour*24; 
-		$week = $day*7;
-		$time = time();
-		$offset = strtotime($row->meta_value);
-		$difference = $time-$offset;
-		$wcount = 0; 
-		for($wcount = 0; $difference>$week; $wcount++) { $difference = $difference - $week; } 
-		$dcount = 0; 
-		for($dcount = 0; $difference>$day; $dcount++) { $difference = $difference - $day; } 
-		$hcount = 0; 
-		for($hcount = 0; $difference>$hour; $hcount++) { $difference = $difference - $hour; } 
-		$mcount = 0; 
-		for($mcount = 0; $difference>$minute; $mcount++) { $difference = $difference - $minute; }
-		
-		$count = $difference.' seconds ago';
-		if ($mcount == 1) { $count = '1 minute ago'; }
-		if ($mcount > 1) { $count = $mcount.' minutes ago'; }
-		if ($hcount == 1) { $count = 'about an hour ago'; }
-		if ($hcount > 1) { $count = $hcount.' hours ago'; }
-		if ($dcount == 1) { $count = 'Yesterday'; }
-		if ($dcount > 1) { $count = $dcount.' days ago'; }
-		if ($wcount == 1) { $count = ' about a week ago'; }
-		if ($wcount > 1) { $count = $wcount.' weeks ago'; }
-
-		// Start second line HTML
-      	$html .= '<span class="lastactive">';
-      	$html .= 'Last active: '.$count;
-      
-      	// Add PM link if logged in
-      	if ( ( is_user_logged_in() ) && ( $emaillink == 'true' ) ) {
-      		if ($emailicon == 'true') {
-			  	$plugin_url = WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__));
-    		  	$html .= ' <img src="'.$plugin_url.'email_icon.gif" alt="Email Icon" />';
-      		}
-    	  	$html .= ' <a href="/members/'.$current_user->user_login.'/messages/compose/?r='.$row->user_login.'">Send Message</a>';
-      	}
-      
-      // Close second line
-      $html .= '</span></li>';
-	}
-   	$html .= '</ul>';
+	// Check that last_activity is there!
+   	$last_activity = $wpdb->get_results("select * from ".$meta." WHERE meta_key = 'last_activity'");
    	
-   	
+   	if ($last_activity) {
+   					
+		// Start list
+		$html .= '<ul id="hts_displaymembers" style="list-style-type:none">';
+		foreach ($result as $row) {
+			
+			// Start item, and first line of HTML
+	      	$html .= '<li style="overflow: hidden"><a href="'.$row->user_url.'">'.get_avatar($row->ID, $avatar_size).'</a>';
+	      	if ($usemeta == 'true') {
+	      		$sql = 'SELECT meta_value FROM '.$meta.' WHERE user_id = '.$row->ID.' AND meta_key = "'.$display.'"';
+	  				$meta_result = $wpdb->get_results($sql);
+		      	$show = $meta_result[0]->meta_value;
+	      	} else {
+		      	$show = $row->$display;
+	      	}
+	      	$html .= '<h2><a href="'.$row->user_url.'">'.$show.'</a></h2>';
 	
+			// Calculate various times since last activity
+			$second = 1; 
+			$minute = $second*60; 
+			$hour = $minute*60; 
+			$day = $hour*24; 
+			$week = $day*7;
+			$time = time();
+			$offset = strtotime($row->meta_value);
+			$difference = $time-$offset;
+			$wcount = 0; 
+			for($wcount = 0; $difference>$week; $wcount++) { $difference = $difference - $week; } 
+			$dcount = 0; 
+			for($dcount = 0; $difference>$day; $dcount++) { $difference = $difference - $day; } 
+			$hcount = 0; 
+			for($hcount = 0; $difference>$hour; $hcount++) { $difference = $difference - $hour; } 
+			$mcount = 0; 
+			for($mcount = 0; $difference>$minute; $mcount++) { $difference = $difference - $minute; }
+			
+			$count = $difference.' seconds ago';
+			if ($mcount == 1) { $count = '1 minute ago'; }
+			if ($mcount > 1) { $count = $mcount.' minutes ago'; }
+			if ($hcount == 1) { $count = 'about an hour ago'; }
+			if ($hcount > 1) { $count = $hcount.' hours ago'; }
+			if ($dcount == 1) { $count = 'Yesterday'; }
+			if ($dcount > 1) { $count = $dcount.' days ago'; }
+			if ($wcount == 1) { $count = ' about a week ago'; }
+			if ($wcount > 1) { $count = $wcount.' weeks ago'; }
+	
+			// Start second line HTML
+	      	$html .= '<span class="lastactive">';
+	      	$html .= 'Last active: '.$count;
+	      
+	      	// Add PM link if logged in
+	      	if ( ( is_user_logged_in() ) && ( $emaillink == 'true' ) ) {
+	      		if ($emailicon == 'true') {
+				  	$plugin_url = WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__));
+	    		  	$html .= ' <img src="'.$plugin_url.'email_icon.gif" alt="Email Icon" />';
+	      		}
+	    	  	$html .= ' <a href="/members/'.$current_user->user_login.'/messages/compose/?r='.$row->user_login.'">Send Message</a>';
+	      	}
+	      
+	      // Close second line
+	      $html .= '</span></li>';
+		}
+	   	$html .= '</ul>';
+	   	
+   	} else {
+   		
+   		$html = "<p><strong>Sorry!</strong> - You need to install BuddyPress for the HTS-Display-Members plugin which generates the last_activity data.</p>";
+
+   	}
+   		
    	return $html;
 }
 add_shortcode('hts-displaymembers', 'display_members');  
