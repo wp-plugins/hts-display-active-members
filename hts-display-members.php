@@ -2,11 +2,11 @@
 
 /*
 Plugin Name: HTS Display Members
-Plugin URI: http://www.htsweb.net/projects/plug-ins
+Plugin URI: http://www.webtechnologysolutions.co.uk/projects/plug-ins
 Description: Display members with the choice of what to display, and how many to show. Includes private message links for logged in members
-Version: 0.1
+Version: 0.2
 Author: Simon Goodchild
-Author URI: http://www.htsweb.net/about/
+Author URI: http://www.webtechnologysolutions.co.uk/
 License: GPL2
 */
 
