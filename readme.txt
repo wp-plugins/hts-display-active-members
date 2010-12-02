@@ -91,19 +91,7 @@ To call it from within a theme, you have to wrap it in this PHP function:
 == Frequently Asked Questions ==
 
 Q. How do I change the style of the list?
-A. Create a folder in your theme called hts-display-members. In that folder, create a file called
-   hts-display-members.css and add the following (which is the default), and then change to 
-   what you want.
-
-`   /* First line (name) */
-   #hts_displaymembers li { margin-bottom: 10px; }
-   #hts_displaymembers li h2 { margin: 1px 0px 0px 0px; text-shadow: none; }
-   #hts_displaymembers li h2 a { text-decoration: none; }
-   
-   /* Avatar image in list item */
-   #hts_displaymembers li img { margin-right: 10px; }
-   /* Email icon image in second line of list item */
-   #hts_displaymembers li .lastactive img { margin: 0px 0px 0px 10px; }`
+A. In the plugin folder is a .css file that you can edit, remember to keep your changes and re-apply them after updating the plugin in future.
    
    You can confirm the path for the file by switching on the debug information (see Plug-in
    description) and looking for the value for STYLESHEETPATH. This is the file you need to create.
