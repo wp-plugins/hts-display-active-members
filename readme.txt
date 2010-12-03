@@ -35,7 +35,7 @@ Features currently include:
 *Languages*
 
 * Supports multiple languages
-* If you language is not included, or to make corrections, please contact us via info@wpsymposium.com and we will work with you on translating the forum to your language.
+* If your language is not included, or to make corrections, please contact us via info@wpsymposium.com and we will work with you on translating the forum to your language.
 
 *Categories*
 
