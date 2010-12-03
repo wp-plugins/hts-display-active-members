@@ -28,7 +28,7 @@ Features currently include:
 Change the styles (look and feel) through the admin panel
 No need to edit stylesheet
 Uses member avatars
-Colour Picker popup – no codes needed!
+Colour Picker popup, no codes needed!
 Set optional rounded corners
 
 *LANGUAGES*
@@ -44,7 +44,7 @@ Default category for new topics (if using categories)
 Set if new Topics allowed or not
 Number of Topics in a Category
 Last topic/reply shown
-How old topics shown as ‘x’ minutes/hours/days ago, etc
+How old topics shown as 'x' minutes/hours/days ago, etc
 
 *TOPICS*
 
@@ -56,7 +56,7 @@ Number of replies to a Topic
 Last post/reply shown
 Edit and Delete topics, posts and replies
 Move Topics between Categories
-How old replies shown as ‘x’ minutes/hours/days ago, etc
+How old replies shown as 'x' minutes/hours/days ago, etc
 
 *EMAIL NOTIFICATIONS*
 
