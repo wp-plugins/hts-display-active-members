@@ -14,16 +14,17 @@ A suite of social networking plugins, starting with a forum.
 
 NOTICE: We are currently BETA testing this plugin. As such, we do not recommend you use it on any production sites. However, we do welcome all feedback, bug reports and suggestions. Please do so at www.wpsymposium.com - thank you.
 
-FORUM
-- - - - - - - - - - - - - - - - - - - - -
+---------------
 
-*OVERVIEW*
+FORUM
+
+*Overview*
 
 The goal of the forum is to be simple and as uncluttered as possible, whilst having powerful features within.
 
 Features currently include:
 
-*STYLES*
+*Styles*
 
 Change the styles (look and feel) through the admin panel
 No need to edit stylesheet
@@ -31,12 +32,12 @@ Uses member avatars
 Colour Picker popup, no codes needed!
 Set optional rounded corners
 
-*LANGUAGES*
+*Languages*
 
 Supports multiple languages
 If you language is not included, or to make corrections, please contact us via info@wpsymposium.com and we will work with you on translating the forum to your language.
 
-*CATEGORIES*
+*Categories*
 
 Optional use of categories
 Order categories
@@ -46,7 +47,7 @@ Number of Topics in a Category
 Last topic/reply shown
 How old topics shown as 'x' minutes/hours/days ago, etc
 
-*TOPICS*
+*Topics*
 
 Create new topics
 Restrict new topics in certain categories (optionally)
@@ -58,7 +59,7 @@ Edit and Delete topics, posts and replies
 Move Topics between Categories
 How old replies shown as 'x' minutes/hours/days ago, etc
 
-*EMAIL NOTIFICATIONS*
+*Email Notifications*
 
 Email notifications to new topics and/or replies to existing topics
 AJAX selection to receive email notifications (no page re-load)
