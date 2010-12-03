@@ -16,7 +16,7 @@ NOTICE: We are currently BETA testing this plugin. As such, we do not recommend 
 
 ---------------
 
-FORUM
+**FORUM**
 
 *Overview*
 
@@ -26,45 +26,45 @@ Features currently include:
 
 *Styles*
 
-Change the styles (look and feel) through the admin panel
-No need to edit stylesheet
-Uses member avatars
-Colour Picker popup, no codes needed!
-Set optional rounded corners
+* Change the styles (look and feel) through the admin panel
+* No need to edit stylesheet
+* Uses member avatars
+* Colour Picker popup, no codes needed!
+* Set optional rounded corners
 
 *Languages*
 
-Supports multiple languages
-If you language is not included, or to make corrections, please contact us via info@wpsymposium.com and we will work with you on translating the forum to your language.
+* Supports multiple languages
+* If you language is not included, or to make corrections, please contact us via info@wpsymposium.com and we will work with you on translating the forum to your language.
 
 *Categories*
 
-Optional use of categories
-Order categories
-Default category for new topics (if using categories)
-Set if new Topics allowed or not
-Number of Topics in a Category
-Last topic/reply shown
-How old topics shown as 'x' minutes/hours/days ago, etc
+* Optional use of categories
+* Order categories
+* Default category for new topics (if using categories)
+* Set if new Topics allowed or not
+* Number of Topics in a Category
+* Last topic/reply shown
+* How old topics shown as 'x' minutes/hours/days ago, etc
 
 *Topics*
 
-Create new topics
-Restrict new topics in certain categories (optionally)
-Site administrators can always create new topics
-Sticky posts that stay at top of forum (set as administrator)
-Number of replies to a Topic
-Last post/reply shown
-Edit and Delete topics, posts and replies
-Move Topics between Categories
-How old replies shown as 'x' minutes/hours/days ago, etc
+* Create new topics
+* Restrict new topics in certain categories (optionally)
+* Site administrators can always create new topics
+* Sticky posts that stay at top of forum (set as administrator)
+* Number of replies to a Topic
+* Last post/reply shown
+* Edit and Delete topics, posts and replies
+* Move Topics between Categories
+* How old replies shown as 'x' minutes/hours/days ago, etc
 
 *Email Notifications*
 
-Email notifications to new topics and/or replies to existing topics
-AJAX selection to receive email notifications (no page re-load)
-Daily Digest to all members for new topics and replies (optionally)
-Customise email notification address
+* Email notifications to new topics and/or replies to existing topics
+* AJAX selection to receive email notifications (no page re-load)
+* Daily Digest to all members for new topics and replies (optionally)
+* Customise email notification address
   
 == Installation ==
 
@@ -106,11 +106,11 @@ A. Contact us via info@wpsymposium.com and we will add the language with your he
 
 = 0.1.3 =
 
-Added support for multiple languages
+* Added support for multiple languages
 
 = 0.1.2 =
 
-First version, no changes yet
+* First version, no changes yet
 
 == Upgrade Notice ==
 
