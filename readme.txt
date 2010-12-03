@@ -73,9 +73,9 @@ Tested with PHP 5.
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Use the admin menu to change options, styles and categories, etc
 
-*Including in a page or post*
+*Adding Forum*
 
-To call it with a shortcode, put the following in a page or post:
+Put the following in a page on your site:
 
   `[symposium-forum]`
   
