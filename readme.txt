@@ -12,7 +12,7 @@ Displays most recently logged in members and optionally link to Private Message 
 
 == Description ==
 
-Requires BuddyPress.
+Requires BuddyPress..
 
 Allows a page or post to display the most recently logged in members with how long since they last did any activity on the site. Options include showing a link to Private Message the member if logged in, the field to display as the members name and so on. 
 
