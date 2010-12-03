@@ -1,7 +1,7 @@
 <?php
 
 /*
-Plugin Name: Symposium Forum
+Plugin Name: WP Symposium Forum
 Plugin URI: http://www.wpsymposium.com
 Description: Forum component for the Symposium suite of plug-ins. Put [symposium_forum] on any page to display forum.
 Version: 0.1.3

@@ -1,7 +1,7 @@
 <?php
 
 /*
-Plugin Name: Symposium
+Plugin Name: WP Symposium
 Plugin URI: http://www.wpsymposium.com
 Description: Core code for Symposium, this plugin must be activated to have the admin menu, and admin functions.
 Version: 0.1.3
