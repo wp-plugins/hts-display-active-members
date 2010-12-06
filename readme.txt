@@ -12,7 +12,7 @@ A new suite of social networking plugins, starting with a forum.
 
 == Description ==
 
-NOTICE: We are currently BETA testing this plugin. As such, we do not recommend you use it on any production sites. However, we do welcome all feedback, bug reports and suggestions. Please do so at www.wpsymposium.com - thank you.
+NOTICE: We are currently BETA testing this plugin. As such, although we have not found any problems, we do not recommend you use it on any production sites. However, we do welcome all feedback, bug reports and suggestions. Please do so at www.wpsymposium.com - thank you.
 
 ---------------
 
