@@ -10,7 +10,7 @@ Author URI: http://www.wpsymposium.com
 License: GPL2
 */
 	
-/*  Copyright 2010  Simon Goodchild  (simon.goodchild@mac.com)
+/*  Copyright 2010  Simon Goodchild  (info@wpsymposium.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
