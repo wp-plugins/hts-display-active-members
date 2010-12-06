@@ -116,7 +116,7 @@ A. Contact us via info@wpsymposium.com and we will add the language with your he
 
 = 0.1.4 =
 
-* Fixed bug where all topics where appearing as new in notifications
+* Fixed bug where all topics were appearing as new in notifications
 * Minor aesthetic change
 
 = 0.1.3 =
