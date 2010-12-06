@@ -70,9 +70,19 @@ Features currently include:
 
 Tested with PHP 5.
 
-1. Upload the plug-in folder to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Use the admin menu to change options, styles and categories, etc
+*Automatic installation*
+
+* go to Plugins->Add New and search for "Symposium"
+* click on Install below WP-Symposium
+* activate the plugins you want to use (core plugin must remain activated)
+
+*Manual installation*
+
+* download from http://wordpress.org/extend/plugins/wp-symposium/
+* unzip the contents of the ZIP file in your /wp-content/plugins folder
+* activate the plugins you want via Plugins on the WordPress admin dashboard (including the core plugin)
+
+When upgrading manually, make sure you deactivate and re-activate the core plugin.
 
 *Adding Forum*
 
