@@ -1,0 +1,143 @@
+=== Plugin Name ===
+Author: Simon Goodchild
+Contributors: Simon Goodchild
+Donate link: http://www.wpsymposium.com
+Link: http://www.wpsymposium.com
+Tags: symposium, forum, social, wall, status, message, groups
+Requires at least: 3.0
+Tested up to: 3.0
+Stable tag: 0.1.5
+
+A new suite of social networking plugins, starting with a forum.
+
+== Description ==
+
+NOTICE: We are currently BETA testing this plugin. As such, although we have not found any problems, we do not recommend you use it on any production sites. However, we do welcome all feedback, bug reports and suggestions. Please do so at www.wpsymposium.com - thank you. 
+
+---------------
+
+**FORUM**
+
+*Overview*
+
+The goal of the forum is to be simple and as uncluttered as possible, whilst having powerful features within.
+
+Features currently include:
+
+*Apperance/Styles*
+
+* Replaces smiley codes with images, eg. :)
+* Change the styles (look and feel) through the admin panel
+* No need to edit stylesheet
+* Uses member avatars
+* Colour Picker popup, no codes needed!
+* Set optional rounded corners
+
+*Languages*
+
+* Supports multiple languages
+* If your language is not included, or to make corrections, please contact us via info@wpsymposium.com and we will work with you on translating the forum to your language.
+
+*Categories*
+
+* Optional use of categories
+* Order categories
+* Default category for new topics (if using categories)
+* Set if new Topics allowed or not
+* Number of Topics in a Category
+* Last topic/reply shown
+* How old topics shown as 'x' minutes/hours/days ago, etc
+
+*Topics*
+
+* Create new topics
+* Restrict new topics in certain categories (optionally)
+* Site administrators can always create new topics
+* Sticky posts that stay at top of forum (set as administrator)
+* Number of replies to a Topic
+* Last post/reply shown
+* Edit and Delete topics, posts and replies
+* Move Topics between Categories
+* How old replies shown as 'x' minutes/hours/days ago, etc
+
+*Email Notifications*
+
+* Email notifications to new topics and/or replies to existing topics
+* AJAX selection to receive email notifications (no page re-load)
+* Daily Digest to all members for new topics and replies (optionally)
+* Customise email notification address
+  
+== Installation ==
+
+Tested with PHP 5.
+
+*Automatic installation*
+
+* go to Plugins->Add New and search for "Symposium"
+* click on Install below WP-Symposium
+* activate the plugins you want to use (core plugin must remain activated)
+
+*Manual installation*
+
+* download from http://wordpress.org/extend/plugins/wp-symposium/
+* unzip the contents of the ZIP file in your /wp-content/plugins folder
+* activate the plugins you want via Plugins on the WordPress admin dashboard (including the core plugin)
+
+When upgrading manually, make sure you deactivate and re-activate the core plugin.
+
+*Adding Forum*
+
+Put the following in a page on your site:
+
+  `[symposium-forum]`
+  
+
+== Screenshots ==
+
+1. Changing Styles
+2. Email notification
+3. Categories (optional)
+4. Start new topic
+5. Forum topic with replies
+6. Admin options screen
+7. Edit Topic/Move Topic
+8. Admin categories screen
+9. Admin menu
+10. Using smilies
+
+== Frequently Asked Questions ==
+
+Q. Where can I find more information?
+A. Go to www.wpsymposium.com
+
+Q. My language isn't supported, can I add my language?
+A. Contact us via info@wpsymposium.com and we will add the language with your help, thank you.
+
+Q. Are there images other than smilies?
+A. Yes, if you look in the smilies folder you can use any of the images by putting [] around the first page of the filename, eg: [rofl] would show rofl.png
+
+== Changelog ==
+
+= 0.1.5 =
+
+* Added client side check if post/reply form not filled in
+* Added automatic smiley replace and image tag replacement, eg: [rofl]
+* Fixed delete category
+* Fixed set 'allow new topics' for new category
+
+= 0.1.4 =
+
+* Fixed bug where all topics were appearing as new in notifications
+* Added two nobreak spaces prior to Back to [topic]... link for narrow forums
+
+= 0.1.3 =
+
+* Added support for multiple languages
+
+= 0.1.2 =
+
+* First version, no changes yet
+
+== Upgrade Notice ==
+
+Latest news and information on www.wpsymposium.com
