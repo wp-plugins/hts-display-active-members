@@ -8,7 +8,7 @@ Requires at least: 3.0
 Tested up to: 3.0
 Stable tag: 0.1.4
 
-A suite of social networking plugins, starting with a forum.
+A new suite of social networking plugins, starting with a forum.
 
 == Description ==
 
