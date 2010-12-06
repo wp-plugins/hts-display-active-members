@@ -1,0 +1,323 @@
+#symposium-wrapper
+{
+	overflow: auto;
+	width:100%;
+	padding: 0px;
+	overflow-x: hidden;
+	-ms-overflow-x: hidden;
+	font-family: arial;
+	font-size: 14px;
+	line-height: 18px;
+	color: #000;
+}
+#symposium-wrapper * {
+	border-radius: 5px;
+}
+
+#symposium-wrapper img 
+{
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+#symposium-wrapper .label
+{
+	height: 22px;
+	margin-top: 6px;
+}
+
+#symposium-wrapper #topic-links
+{
+	list-style-type:none;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 15px;
+	color: #000;
+}
+
+#symposium-wrapper #new-topic-link, #reply-topic-link
+{
+	padding: 6px;
+	width: 220px;
+	text-align: center;
+	background-color: #990;
+	cursor: pointer;
+	margin-left: 0;
+}
+
+#symposium-wrapper #new-topic-link:hover, #reply-topic-link:hover
+{
+	background-color: #aa3;
+	color: white;
+}
+
+/* New/Reply Topic Post */
+#symposium-wrapper #new-topic, #symposium-wrapper #edit-topic-div
+{
+	width: 80%;
+	overflow:auto;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	padding-left: 15px;
+	padding-top: 10px;
+	border: 1px solid #000;
+}
+#symposium-wrapper #edit-topic-div
+{
+	display: none;
+	width: 700px;
+	height: 325px;
+}
+#symposium-wrapper .new-topic-subject-input
+{
+	width: 95%;
+	height:40px;
+	font-family: arial; 
+	font-size: 24px;
+	padding: 2px;
+	border: 1px solid black;
+	margin-left: 2px;
+}
+#symposium-wrapper .new-topic-subject-text, #symposium-wrapper .reply-topic-subject-text, #symposium-wrapper .reply-topic-text
+{
+	width: 95%;
+	height: 120px;
+	border: 1px solid black;
+	padding: 4px;
+	margin-bottom: 15px;
+	font-family: arial; 
+	font-size: 14px;
+}
+#symposium-wrapper #reply-topic, #symposium-wrapper #reply-topic-bottom
+{
+	width: 80%;
+	clear: both;
+	overflow: auto;
+	padding-top: 10px;
+	margin-top: 20px;
+}
+#symposium-wrapper #reply-topic {
+	margin-bottom: 10px;
+	padding-left: 15px;
+	border: 1px solid #000;
+}
+
+#symposium-wrapper .emailreplies 
+{
+	margin-bottom: 15px;
+}
+
+#symposium-wrapper .new-topic-category
+{
+}
+
+/* Post and Thread */
+
+#symposium-wrapper #starting-post, #symposium-wrapper #child-posts
+{
+	border: 1px solid #aaa;
+	padding-right: 5px;
+	background-color: #ddd;
+	padding: 10px;
+	clear: both;
+}
+#symposium-wrapper .topic-post-post
+{
+}
+#symposium-wrapper #child-posts
+{
+	background-color: #eee;
+}
+#symposium-wrapper .topic-post-header
+{
+	font-size: 28px;
+	margin-bottom: 24px;
+	padding-top: 6px;
+}
+#symposium-wrapper .started-by
+{
+	color: #aaa;
+	font-style: italic;
+	margin-bottom: 6px;
+}
+#symposium-wrapper .floatright
+{
+	float: right;
+	margin-bottom: 10px;
+}
+#symposium-wrapper .child-reply 
+{
+	clear: both;
+	border-bottom: 1px dashed #ddd;
+	padding-top: 6px;
+	overflow:auto;
+}
+#symposium-wrapper .avatar 
+{
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+#symposium-wrapper child-posts .child-reply .child-reply-post 
+{
+	margin-bottom: 115px;
+}
+#symposium-wrapper child-posts .child-reply .child-reply-post p
+{
+	border: 1px solid red;
+}
+/* Buttons */
+
+#symposium-wrapper .button
+{
+	background-color: #990;
+	border: 0;
+	text-align: center; 
+	margin-right: 10px; 
+	margin-bottom: 20px; 
+	width: 75px; 
+	height: 28px;
+	font-family: arial; 
+	font-size: 14px;
+	cursor: pointer;
+}
+#symposium-wrapper .button:hover
+{
+	background-color: #aa3;
+}
+
+/* Forum */
+
+#symposium-wrapper .symposium_subscribe_option
+{
+	float: right;
+	margin-top: -10px;
+}
+
+#symposium-wrapper #symposium_table
+{
+	border: 1px solid #990;
+	margin-top: 10px;
+}
+#symposium-wrapper .table_topic, #symposium-wrapper .row_topic
+{
+	border-radius: 0px;
+	width: 41%;
+}
+
+#symposium-wrapper .table_startedby, #symposium-wrapper .row_startedby
+{
+	border-radius: 0px;
+	width: 25%;
+}
+
+#symposium-wrapper .table_freshness, #symposium-wrapper .row_freshness
+{
+	border-radius: 0px;
+	width: 13%;
+	text-align: right;
+}
+
+#symposium-wrapper .table_replies, #symposium-wrapper .row_replies
+{
+	border-radius: 0px;
+	width: 10%;
+	text-align: center;
+}
+
+#symposium-wrapper .table_views, #symposium-wrapper .row_views
+{
+	border-radius: 0px;
+	width: 10%;
+	text-align: center;
+}
+
+#symposium-wrapper .table_header
+{
+	padding: 6px;
+}
+#symposium-wrapper .table_topic, #symposium-wrapper .table_startedby, #symposium-wrapper .table_freshness, #symposium-wrapper .table_replies, #symposium-wrapper .table_views 
+{
+	font-weight: bold;
+	padding: 6px;
+	background-color: #990;
+	color: #fff;
+}
+#symposium-wrapper .row
+{
+	background-color: #ffc;
+}
+#symposium-wrapper .row_odd
+{
+	background-color: #ffd;
+}
+#symposium-wrapper .row:hover, #symposium-wrapper .row_odd:hover
+{
+	background-color: #fff;
+}
+
+#symposium-wrapper .row_topic, #symposium-wrapper .row_startedby, #symposium-wrapper .row_freshness, #symposium-wrapper .row_replies, #symposium-wrapper .row_views
+{
+	border-bottom: 1px dashed #aaa;
+	border-top: 0px;
+	font-weight: normal;
+	padding: 6px;
+	line-spacing: 28px;
+}
+#symposium-wrapper .row_link_div
+{
+	margin-bottom: 5px;
+}
+#symposium-wrapper .row_link
+{
+	font-weight: bold;
+	font-size: 16px;
+}
+#symposium-wrapper .row_link:hover
+{
+	text-decoration: underline;
+}
+#symposium-wrapper .row_topic_text
+{
+	font-style: italic;
+}
+
+#symposium-wrapper .categories_color {
+	color: #fff;
+}
+#symposium-wrapper .categories_background {
+	background-color: #fff;
+	padding: 6px;
+	border-radius: 0;
+}
+
+#symposium-wrapper .delete, #symposium-wrapper .edit {
+	float: right;
+	display:none;
+	color: red;
+	font-size: 12px;
+	font-style: normal;
+	text-decoration: none;
+}
+
+/* Saving... */
+#symposium-wrapper .notice, #symposium-wrapper .pleasewait
+{
+	position: absolute; 
+	border: 2px solid #090; 
+	padding: 6px; 
+	background-color: #fff;
+	display: none;
+}
+
+/* Shadow */
+.shadow {
+	-moz-box-shadow: 3px 3px 4px #000;
+	-webkit-box-shadow: 3px 3px 4px #000;
+	box-shadow: 3px 3px 4px #000;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}
