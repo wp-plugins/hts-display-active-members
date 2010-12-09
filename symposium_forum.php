@@ -709,7 +709,7 @@ function symposium_forum() {
 				SELECT tid, topic_subject, topic_post, topic_started, display_name, topic_sticky, topic_owner 
 				FROM ".$topics." INNER JOIN ".$users." ON ".$topics.".topic_owner = ".$users.".ID 
 				WHERE tid = ".$show);
-	
+				
 			if ($post) {
 			
 				// Edit Form
@@ -745,7 +745,7 @@ function symposium_forum() {
 
 				$html .= "<div id='top_of_first_post' style='height:80px'>";
 				$html .= "<div class='avatar' style='margin-bottom:0px'>";
-					$html .= get_avatar($post->post_owner, 64);
+					$html .= get_avatar($post->topic_owner, 64);
 				$html .= "</div>";
 				
 				$html .= "<div class='topic-post-header'>".stripslashes($post->topic_subject)."</div>";					
