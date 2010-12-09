@@ -705,9 +705,8 @@ function symposium_smilies($buffer){ // $buffer contains entire page
 	$buffer = str_replace(":)", "<img src='".$smileys."smile.png' alt='emoticon'/>", $buffer);
 	$buffer = str_replace(":(", "<img src='".$smileys."sad.png' alt='emoticon'/>", $buffer);
 	$buffer = str_replace(":'(", "<img src='".$smileys."crying.png' alt='emoticon'/>", $buffer);
-	$buffer = str_replace(":‘(", "<img src='".$smileys."crying.png' alt='emoticon'/>", $buffer);
 	$buffer = str_replace(":x", "<img src='".$smileys."kiss.png' alt='emoticon'/>", $buffer);
-	$buffer = str_replace(":X", "<img src='".$smileys."shut_mouth.png' alt='emoticon'/>", $buffer);
+	$buffer = str_replace(":X", "<img src='".$smileys."shutup.png' alt='emoticon'/>", $buffer);
 	$buffer = str_replace(":D", "<img src='".$smileys."laugh.png' alt='emoticon'/>", $buffer);
 	$buffer = str_replace(":$", "<img src='".$smileys."moneymouth.png' alt='emoticon'/>", $buffer);
 	$buffer = str_replace(":|", "<img src='".$smileys."neutral.png' alt='emoticon'/>", $buffer);
