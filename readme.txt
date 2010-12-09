@@ -127,7 +127,7 @@ Q. I've done that, but the forum still doesn't appear?
 A. Make sure you go to the Option page in admin and save your settings. Important!
 
 Q. My language isn't supported, can I add my language?
-A. Contact us via info@wpsymposium.com and we will add the language with your help, thank you.
+A. Contact us via www.wpsymposium.com and we will add the language with your help, thank you.
 
 Q. Are there images other than smilies?
 A. Yes, if you look in the smilies folder you can use any of the images there by putting {{xxx}} around the first part of the filename, eg: {{rofl}} would show rofl.png - for more information see the Forum Smilies page on www.wpsymposium.com
