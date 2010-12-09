@@ -1151,28 +1151,6 @@ function updateForumSubscribe(){
 }
 add_action('wp_ajax_updateForumSubscribe', 'updateForumSubscribe');
 
-// Add jQuery and jQuery scripts
-function forum_init() {
-	if (!is_admin()) {
-		wp_enqueue_script('jquery');
-	}
-}
-add_action('init', 'forum_init');
-
-// Add Stylesheet
-function add_symposium_stylesheet() {
-    $myStyleUrl = WP_PLUGIN_URL . '/wp-symposium/symposium.css';
-    $myStyleFile = WP_PLUGIN_DIR . '/wp-symposium/symposium.css';
-    if ( file_exists($myStyleFile) ) {
-        wp_register_style('symposium_StyleSheet', $myStyleUrl);
-        wp_enqueue_style('symposium_StyleSheet');
-    } else {
-	    wp_die( __('Stylesheet ('.$myStyleFile.' not found.') );
-    }
-    
-}
-add_action('wp_print_styles', 'add_symposium_stylesheet');
-
 /* ====================================================== SET SHORTCODE ====================================================== */
 add_shortcode('symposium-forum', 'symposium_forum');  
 

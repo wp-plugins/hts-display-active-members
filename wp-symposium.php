@@ -47,7 +47,7 @@ function symposium_widget() {
 	
 	global $wpdb;
 	
-	echo '<img src="'.WP_PLUGIN_URL.'/wp-symposium/logo_small.gif" alt="WP Symposium logo" style="float:right; width:100px;height:100px;" />';
+	echo '<img src="'.WP_PLUGIN_URL.'/wp-symposium/logo_small.gif" alt="WP Symposium logo" style="float:right; width:100px;height:120px;" />';
 
 	echo '<table>';
 	echo '<tr><td style="padding:8px"><a href="admin.php?page=symposium_categories">Categories</a></td>';
@@ -56,11 +56,15 @@ function symposium_widget() {
 	echo '<td style="padding:8px">'.$wpdb->get_var("SELECT COUNT(*) FROM ".$wpdb->prefix.'symposium_topics'." WHERE topic_parent = 0").'</td></tr>';
 	echo '<tr><td style="padding:8px">Replies</td>';
 	echo '<td style="padding:8px">'.$wpdb->get_var("SELECT COUNT(*) FROM ".$wpdb->prefix.'symposium_topics'." WHERE topic_parent > 0").'</td></tr>';
+	echo '<tr><td style="padding:8px">Views</td>';
+	echo '<td style="padding:8px">'.$wpdb->get_var("SELECT SUM(topic_views) FROM ".$wpdb->prefix.'symposium_topics'." WHERE topic_parent = 0").'</td></tr>';
 	echo '</table>';
-	
+
 	echo '<p>';
-	echo 'WP Symposium Version: '.get_option("symposium_version").'<br />';
-	echo 'Database version: '.get_option("symposium_db_version");
+	echo 'WP Symposium Version: <strong>'.get_option("symposium_version").'</strong><br />';
+	echo 'Database version: <strong>'.get_option("symposium_db_version").'</strong><br />';
+	$forum_url = $wpdb->get_var($wpdb->prepare("SELECT forum_url FROM ".$wpdb->prefix . 'symposium_config'));
+	echo '<a href="'.$forum_url.'">View Forum</a>';
 	echo '</p>';
 }
 
@@ -701,6 +705,7 @@ function symposium_notification_trigger_schedule() {
 // Hook to replace Smilies
 function symposium_smilies($buffer){ // $buffer contains entire page
 	$smileys = WP_PLUGIN_URL . '/wp-symposium/smilies/';
+	$smileys_dir = WP_PLUGIN_DIR . '/wp-symposium/smilies/';
 	// Smilies as classic text
 	$buffer = str_replace(":)", "<img src='".$smileys."smile.png' alt='emoticon'/>", $buffer);
 	$buffer = str_replace(":(", "<img src='".$smileys."sad.png' alt='emoticon'/>", $buffer);
@@ -728,7 +733,11 @@ function symposium_smilies($buffer){ // $buffer contains entire page
 				$first_bit = substr($buffer, 0, $start);
 				$last_bit = substr($buffer, $end+2, strlen($buffer)-$end-2);
 				$bit = substr($buffer, $start+2, $end-$start-2);
-				$buffer = $first_bit."<img src='".$smileys.$bit.".png' alt='emoticon'/>".$last_bit;
+				if (file_exists($smileys_dir.$bit.".png")) {
+					$buffer = $first_bit."<img src='".$smileys.$bit.".png' alt='emoticon'/>".$last_bit;
+				} else {
+					$buffer = $first_bit."&#123;&#123;".$bit."&#125;&#125;".$last_bit;
+				}
 			}
 		}
 	} while ($i < 100 && strpos($buffer, "{{")>0);
@@ -818,6 +827,28 @@ function admin_init() {
 }
 add_action('init', 'admin_init');
 
+// Add jQuery and jQuery scripts
+function forum_init() {
+	if (!is_admin()) {
+		wp_enqueue_script('jquery');
+	}
+}
+add_action('init', 'forum_init');
+
+// Add Stylesheet
+function add_symposium_stylesheet() {
+	if (!is_admin()) {
+	    $myStyleUrl = WP_PLUGIN_URL . '/wp-symposium/symposium.css';
+	    $myStyleFile = WP_PLUGIN_DIR . '/wp-symposium/symposium.css';
+	    if ( file_exists($myStyleFile) ) {
+	        wp_register_style('symposium_StyleSheet', $myStyleUrl);
+	        wp_enqueue_style('symposium_StyleSheet');
+	    } else {
+		    wp_die( __('Stylesheet ('.$myStyleFile.' not found.') );
+	    }
+	}    
+}
+add_action('wp_print_styles', 'add_symposium_stylesheet');
 
 
 register_activation_hook(__FILE__,'symposium_activate');
