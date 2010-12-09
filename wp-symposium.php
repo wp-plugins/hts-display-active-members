@@ -409,7 +409,7 @@ function symposium_activate() {
 		// Add Languages to Options
    		$wpdb->query("ALTER TABLE ".$wpdb->prefix."symposium_config"." ADD language varchar(3) NOT NULL DEFAULT 'ENG'");
    		
-	 	// Languages Table
+	 	// Add Languages Table
 	   	$table_name = $wpdb->prefix . "symposium_lang";
 	   	if($wpdb->get_var("show tables like '$table_name'") != $table_name) {
 	      
@@ -458,7 +458,6 @@ function symposium_activate() {
 	  		);";
 	  		
 	      dbDelta($sql);
-	      // Values loaded in below...
 	
 	   	} 
 
@@ -470,7 +469,7 @@ function symposium_activate() {
 	// Version 3
 	if ($db_ver == "2") {
 
-		// Add more language labels
+		// Add language labels
    		$wpdb->query("ALTER TABLE ".$wpdb->prefix."symposium_lang"." ADD prs varchar(256) NOT NULL");
    		$wpdb->query("ALTER TABLE ".$wpdb->prefix."symposium_lang"." ADD prm varchar(256) NOT NULL");
    		

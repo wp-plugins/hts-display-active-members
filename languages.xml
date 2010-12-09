@@ -108,7 +108,7 @@
 			<translation code="emw">Enviar un correo electronico cuando tenga una respuesta</translation>
 			<translation code="rew">Recibir correos electronicos cuando halla nuevos topicos anunciados</translation>
 			<translation code="sb">Comensar</translation>
-			<translation code="re">respondió</translation>
+			<translation code="re">respondio</translation>
 			<translation code="rer">Recivir emails cuando halla respuestas a este topico</translation>
 			<translation code="tis">Topico es anadido</translation>
 			<translation code="aar">Anadir una respuesta a este topico</translation>
@@ -126,6 +126,48 @@
 			<translation code="sav">Salvando...</translation>
 			<translation code="prs">Por favor entre un tema.</translation>
 			<translation code="prm">Por favor entre un mensaje.</translation>
+		</language>
+		<language ref="German">
+			<translation code="sant">Neues Thema erstellen</translation>
+	      	<translation code="p">Beitrag</translation>
+	      	<translation code="rtt">Auf den Beitrag antworten...</translation>
+	      	<translation code="c">Abbrechen</translation>
+	      	<translation code="e">Bearbeiten</translation>
+	      	<translation code="d">L#ouml;schen</translation>
+	      	<translation code="rep">Antworten</translation>
+	      	<translation code="u">Aktualisieren</translation>
+			<translation code="ts">#Uuml;berschrift des Beitrags</translation>
+			<translation code="fpit">Erster Themenbeitrag</translation>
+	      	<translation code="cat">Kategorie</translation>
+	      	<translation code="top">Themen</translation>
+	      	<translation code="t">Thema</translation>
+	      	<translation code="lac">Neuestes Thema</translation>
+	      	<translation code="sbl">Ver#ouml;ffentlicht von/Letzter Beitrag</translation>
+	      	<translation code="f">Neuheit</translation>
+	      	<translation code="r">Antworten</translation>
+	      	<translation code="v">Ansichten</translation>
+	      	<translation code="sac">Kategorie ausw#auml;hlen</translation>
+	      	<translation code="emw">Informiere mich per Email #uuml;ber neue Antworten</translation>
+	      	<translation code="rew">Rnachrichtiung per Email, sobald neue Themen vorhanden sind</translation>
+	      	<translation code="sb">Ver#ouml;ffentlicht von</translation>
+	      	<translation code="rer">Benachrichtiung per Email, sobald neue Antworten zu diesem Thema vorhanden sind</translation>
+	      	<translation code="tis">Dieses Thema wurde angepinnt</translation>
+	      	<translation code="aar">Antwort zu diesem Thema verfassen</translation>
+	      	<translation code="nft">Neues Foren-Thema</translation>
+	      	<translation code="nfr">Neue Antwort zu diesem Thema</translation>
+	      	<translation code="wir">Benachrichtige mich, sobald neue Antworten vorhanden sind</translation>
+	      	<translation code="tt">Text</translation>
+	      	<translation code="btf">Zur#uuml;ck zum Forum</translation>
+	      	<translation code="bt">Zur#uuml;ck zu</translation>
+	      	<translation code="mc">Kategorie verschieben</translation>
+	      	<translation code="s">Ausw#auml;hlen...</translation>
+	      	<translation code="hsa">ein neues Thema ver#ouml;ffentlicht</translation>
+	      	<translation code="re">antwortete</translation>
+	      	<translation code="i">in</translation>
+	      	<translation code="pw">Bitte warten...</translation>
+	      	<translation code="sav">Speichern...</translation>
+	      	<translation code="prs">Bitte gib einen Betreff ein.</translation>
+	      	<translation code="prm">Bitte gib ein Text ein.</translation>
 		</language>
 	</languages>
 </lfm>
