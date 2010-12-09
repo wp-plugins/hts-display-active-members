@@ -47,8 +47,10 @@ function symposium_widget() {
 	
 	global $wpdb;
 	
+	echo '<img src="'.WP_PLUGIN_URL.'/wp-symposium/logo_small.gif" alt="WP Symposium logo" style="float:right; width:100px;height:100px;" />';
+
 	echo '<table>';
-	echo '<tr><td style="padding:8px">Categories</td>';
+	echo '<tr><td style="padding:8px"><a href="admin.php?page=symposium_categories">Categories</a></td>';
 	echo '<td style="padding:8px">'.$wpdb->get_var("SELECT COUNT(*) FROM ".$wpdb->prefix.'symposium_cats').'</td></tr>';
 	echo '<tr><td style="padding:8px">Topics</td>';
 	echo '<td style="padding:8px">'.$wpdb->get_var("SELECT COUNT(*) FROM ".$wpdb->prefix.'symposium_topics'." WHERE topic_parent = 0").'</td></tr>';

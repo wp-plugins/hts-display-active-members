@@ -742,9 +742,16 @@ function symposium_forum() {
 				if ( ($post->topic_owner == $current_user->ID) || (current_user_can('level_10')) ) {
 					$html .= "<div id='edit-this-topic' class='edit_topic edit label' style='cursor:pointer'>".$language->e."</div>";
 				}
+
+				$html .= "<div id='top_of_first_post' style='height:80px'>";
+				$html .= "<div class='avatar' style='margin-bottom:0px'>";
+					$html .= get_avatar($post->post_owner, 64);
+				$html .= "</div>";
 				
 				$html .= "<div class='topic-post-header'>".stripslashes($post->topic_subject)."</div>";					
 				$html .= "<div class='started-by'>".$language->sb." ".$post->display_name." ".symposium_time_ago($post->topic_started, $language_key)."</div>";
+				$html .= "</div>";
+
 				$html .= "<div class='topic-post-post'>".str_replace(chr(13), "<br />", stripslashes($post->topic_post))."</div>";
 				
 				$html .= "</div>";

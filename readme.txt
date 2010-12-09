@@ -141,7 +141,7 @@ A. Yes, if you look in the smilies folder you can use any of the images there by
 * Added: Spanish language (thanks to Patricia Blanco)
 * Added: German language (thanks to Pascal)
 * Added: Use of external XML file for languages
-* Added: Warning to set Options for WP Symposium after activation
+* Added: Warning to set Options for WP Symposium after initial installation
 * Fixed: Handling apostrophe's when editing a post and other places
 * Fixed: Don't show backslashes where shouldn't do
 * Fixed: To work if not using Permalinks, ie. using ?page_id=x
