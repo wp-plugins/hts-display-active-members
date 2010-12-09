@@ -5,7 +5,7 @@ Donate link: http://www.wpsymposium.com
 Link: http://www.wpsymposium.com
 Tags: symposium, forum, social, wall, status, message, groups, french, spanish, german
 Requires at least: 3.0
-Tested up to: 3.0
+Tested up to: 3.0.3
 Stable tag: 0.1.6
 
 A new suite of social networking plugins, starting with a forum.

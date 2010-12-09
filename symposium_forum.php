@@ -959,6 +959,7 @@ function symposium_time_ago($date,$language,$granularity=1) {
         	break;    
     case "Spanish":
     		$retval = str_replace("second", "segundo", $retval);
+    		$retval = str_replace("minute", "minuto", $retval);
     		$retval = str_replace("hour", "hora", $retval);
     		$retval = str_replace("day", "dia", $retval);
     		$retval = str_replace("week", "semana", $retval);
@@ -966,6 +967,22 @@ function symposium_time_ago($date,$language,$granularity=1) {
     		$retval = str_replace("mess", "meses", $retval);
     		$retval = str_replace("year", "ano", $retval);
 	    	$retval = "hace ".$retval;
+        	break;    
+    case "German":
+    		$retval = str_replace("second", "sekunde", $retval);
+    		$retval = str_replace("sekundes", "sekunden", $retval);
+    		$retval = str_replace("minutes", "minuten", $retval);
+    		$retval = str_replace("hour", "stunde", $retval);
+    		$retval = str_replace("stundes", "stunden", $retval);
+    		$retval = str_replace("day", "tag", $retval);
+    		$retval = str_replace("tags", "tage", $retval);
+    		$retval = str_replace("week", "woche", $retval);
+    		$retval = str_replace("woches", "wochen", $retval);
+    		$retval = str_replace("month", "monat", $retval);
+    		$retval = str_replace("monats", "monate", $retval);
+    		$retval = str_replace("year", "jahr", $retval);
+    		$retval = str_replace("jahrs", "jahre", $retval);
+	    	$retval = "vor ".$retval;
         	break;    
     }
     return $retval;      
