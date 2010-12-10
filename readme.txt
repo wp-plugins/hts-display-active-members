@@ -134,7 +134,7 @@ A. Yes, if you look in the smilies folder you can use any of the images there by
 
 == Changelog ==
 
-= 0.1.7 ==
+= 0.1.7 =
 
 * Added: Avatars in first topic post
 * Added: Small avatars on started by/last reply column
@@ -163,7 +163,7 @@ A. Yes, if you look in the smilies folder you can use any of the images there by
 = 0.1.5 =
 
 * Added: Client side check if post/reply form not filled in
-* Added: Automatic smiley replace and image tag replacement, eg: [rofl]
+* Added: Automatic smiley replace and image tag replacement, eg: {{rofl}}
 * Fixed: Delete category
 * Fixed: Set 'allow new topics' for new category
 

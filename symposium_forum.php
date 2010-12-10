@@ -627,7 +627,7 @@ function symposium_forum() {
 						$html .= "</div>";
 
 						// Category title
-						$html .= '<div style="padding-left:9px;padding-top:13px">';
+						$html .= '<div style="padding-left:8px;padding-top:13px">';
 						$html .= '<a class="backto row_link" href="'.$thispage.symposium_permalink($category->cid, "category").$q.'cid='.$category->cid.'">'.stripslashes($category->title).'</a>';
 						$html .= '</div>';
 
