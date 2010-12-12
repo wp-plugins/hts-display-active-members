@@ -48,7 +48,10 @@ Features currently include:
 
 *Languages*
 
-* Supports multiple languages, currently English, French, Spanish and German
+* English
+* French
+* Spanish language (thanks to Patricia Blanco)
+* German language (thanks to Pascal)
 * If your language is not included, or to make corrections, please contact us via info@wpsymposium.com and we will work with you on translating the forum to your language.
 
 *Categories*
