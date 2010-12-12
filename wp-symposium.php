@@ -559,7 +559,7 @@ function symposium_activate() {
    		$wpdb->query("ALTER TABLE ".$wpdb->prefix."symposium_config ADD preview1 int(11) NOT NULL DEFAULT '45'");
    		$wpdb->query("ALTER TABLE ".$wpdb->prefix."symposium_config ADD preview2 int(11) NOT NULL DEFAULT '90'");
 		// Minimum level of user for viewing
-   		$wpdb->query("ALTER TABLE ".$wpdb->prefix."symposium_config ADD viewer varchar(32) NOT NULL DEFAULT 'Subscriber'");
+   		$wpdb->query("ALTER TABLE ".$wpdb->prefix."symposium_config ADD viewer varchar(32) NOT NULL DEFAULT 'Guest'");
 		// Include admin's in viewing counts?
    		$wpdb->query("ALTER TABLE ".$wpdb->prefix."symposium_config ADD include_admin varchar(2) NOT NULL DEFAULT 'on'");
 		// Show oldest replies first?
