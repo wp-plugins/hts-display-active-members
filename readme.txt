@@ -150,17 +150,11 @@ A. Yes, if you look in the smilies folder you can use any of the images there by
 
 == Changelog ==
 
-= Version number format =
-
-v = Major release, with signficant additions and changes throughout
-v.x = Major release, code changes only to segments, requires upgrade to database
-v.x.y = Minor additions or changes to code segments, requires upgrade to database
-v.x.y.p = Patch, no change to database
-
 = 0.1.8.2 =
 
 * Added: Subscribe to individual categories for new topics
 * Removed: Forum-wide new topic subscription
+* Fixed: Error caused with links from rest of site (eg. a blog) redirecting to the forum
 * Fixed: Problem with apostrophe when editing topic subjects
 * Fixed: CSS issue with internal widths hiding far right pixels
 
