@@ -81,6 +81,7 @@ Features currently include:
 * Move Topics between Categories
 * How old replies shown as 'x' minutes/hours/days ago, etc
 * Choose if topic replies are allowed
+* Opaque "closed" topics (as defined) if used as support forum
 
 *Email Notifications*
 
@@ -157,9 +158,10 @@ A. Yes, if you look in the smilies folder you can use any of the images there by
 
 * Added: Style option for main background color
 * Added: Style option for opacity of topics with [closed] in the subject
-* Added: Option to change "closed" word to any word
+* Added: Option to change the "opacity trigger word" from closed
+* Added: Links in email notifications
 * Added: Italian language
-* Added: Turksih language
+* Added: Turkish language
 * Added: Czeck language
 
 = 0.1.8.2 =
