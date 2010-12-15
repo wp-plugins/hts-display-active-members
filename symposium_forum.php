@@ -443,7 +443,7 @@ function symposium_forum() {
 		include_once('symposium_styles.php');
 	
 		// Wrapper
-		$html .= "<div id='symposium-wrapper'>";
+		$html .= "<div id='symposium-wrapper' style='z-index:900000;'>";
 	
 		// default message
 		$msg = "";

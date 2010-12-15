@@ -862,7 +862,8 @@ function symposium_plugin_styles() {
 		
 			</table> 
 			 
-			<p class="submit"> 
+			<p class="submit">
+			<p>NB. If changes don't follow the above, you may be overriding them with your own stylesheet.</p>
 			<input type="submit" name="Submit" class="button-primary" value="Apply Changes" /> 
 			</p> 
 			</form> 
