@@ -109,6 +109,7 @@
 		$html .= "#symposium-wrapper .table_topic {";
 		$html .= "	font-family: ".$headingsfamily.";";
 		$html .= "	font-size: ".$headingssize.";";
+		$html .= "	background-color: ".$categories_background.";";
 		$html .= "	color: ".$categories_color.";";
 		$html .= "}";
 		
