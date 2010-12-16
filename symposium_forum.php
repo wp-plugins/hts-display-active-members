@@ -33,12 +33,13 @@ function symposium_forum() {
 	$plugin = get_site_url().'/wp-content/plugins/'.$plugin_dir.'/';
 	$thispage = get_permalink();
 	if ($thispage[strlen($thispage)-1] != '/') { $thispage .= '/'; }
+	$forum_url = $wpdb->get_var($wpdb->prepare("SELECT forum_url FROM ".$wpdb->prefix . 'symposium_config'));
 	
 	$dbpage = WP_PLUGIN_URL.'/'.$plugin_dir.'/symposium_forum_db.php';
 	
 	if (isset($_GET[page_id]) && $_GET[page_id] != '') {
 		// No Permalink
-		$thispage = "/?page_id=".$_GET['page_id'];
+		$thispage = $forum_url;
 		$q = "&";
 	} else {
 		$q = "?";
