@@ -1,0 +1,8 @@
+1 = core activation
+2 = core deactivation
+3 = xml file found, failed to load
+4 = xml file not found
+5 = forum activation
+6 = forum deactivation
+7 = audit cleared
+8 = audit failed to clear
