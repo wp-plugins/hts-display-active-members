@@ -19,7 +19,7 @@ function symposium_plugin_menu() {
 					// Get details
 					$post = $wpdb->get_row( $wpdb->prepare("SELECT t.*, u.user_email FROM ".$wpdb->prefix."symposium_topics t LEFT JOIN ".$wpdb->prefix."users u ON t.topic_owner = u.ID WHERE tid = ".$_GET['tid']) );
 
-					$body .= "<span style='font-size:24px'>Your forum post has been rejected by the moderator.</span>";
+					$body .= "<span style='font-size:24px'>".$language->fma."</span>";
 					if ($topic_parent == 0) { $body .= "<p><strong>".stripslashes($post->topic_subject)."</strong></p>"; }
 					$body .= "<p>".stripslashes($post->topic_post)."</p>";
 					$body = str_replace(chr(13), "<br />", $body);
@@ -27,7 +27,7 @@ function symposium_plugin_menu() {
 					$body = str_replace("\\", "", $body);
 						
 					// Email author if post needs approval
-					symposium_sendmail($post->user_email, 'Forum post REJECTED by moderation', $body);
+					symposium_sendmail($post->user_email, get_site_url(), $body);
 					
 					if ($wpdb->query( $wpdb->prepare("DELETE FROM ".$wpdb->prefix."symposium_topics WHERE tid = ".$_GET['tid']) ) ) {
 						symposium_audit(array ('code'=>53, 'type'=>'info', 'plugin'=>'menu', 'tid'=>$_GET['tid'], 'message'=>'Deleted post.'));
@@ -47,7 +47,7 @@ function symposium_plugin_menu() {
 					// Get details
 					$post = $wpdb->get_row( $wpdb->prepare("SELECT t.*, u.user_email, u.display_name FROM ".$wpdb->prefix."symposium_topics t LEFT JOIN ".$wpdb->prefix."users u ON t.topic_owner = u.ID WHERE tid = ".$_GET['tid']) );
 
-					$body .= "<span style='font-size:24px'>Your forum post has been approved by the moderator.</span>";
+					$body .= "<span style='font-size:24px'>".$language->fma."</span>";
 					if ($topic_parent == 0) { $body .= "<p><strong>".stripslashes($post->topic_subject)."</strong></p>"; }
 					$body .= "<p>".stripslashes($post->topic_post)."</p>";
 					$body .= "<p>".$forum_url."?cid=".$post->topic_category."&show=".$_GET['tid']."</p>";
@@ -56,7 +56,7 @@ function symposium_plugin_menu() {
 					$body = str_replace("\\", "", $body);
 
 					// Email author if post needs approval
-					symposium_sendmail($post->user_email, 'Forum post APPROVED by moderation', $body);
+					symposium_sendmail($post->user_email, get_site_url(), $body);
 
 					// Email people who want to know and prepare body
 					$parent = $wpdb->get_row($wpdb->prepare("SELECT tid, topic_subject FROM ".$wpdb->prefix."symposium_topics WHERE tid = ".$post->topic_parent));
@@ -408,6 +408,8 @@ function symposium_plugin_debug() {
 		if (!symposium_field_exists($table_name, 'ycs')) { $status = "X"; }
 		if (!symposium_field_exists($table_name, 'nty')) { $status = "X"; }
 		if (!symposium_field_exists($table_name, 'pen')) { $status = "X"; }
+		if (!symposium_field_exists($table_name, 'fma')) { $status = "X"; }
+		if (!symposium_field_exists($table_name, 'fmr')) { $status = "X"; }
 		if ($status == "X") { $status = $fail."Incomplete table".$fail2; $overall = "X"; }
    	}   	
    	echo $status;
@@ -663,16 +665,7 @@ function symposium_plugin_debug() {
 			echo '<ol>';
 			foreach ($language_options as $option)
 			{
-				$xml_dir = WP_PLUGIN_DIR . '/wp-symposium/languages.xml';
-				if ($option->language == "XML file found, but failed to load.") { 
-					$success = "The default language has been installed. However, the XML language file was found at ".$xml_dir.", but no additional languages have been installed - probably need fopen or curl enabled on the server.";
-				} else {
-					if ($option->language == "XML file not found") { 
-						$success = "The XML language file was not found at ".$xml_dir.".";
-					} else {
-						echo "<li>".$option->language."</li>";
-					}
-				}
+				echo "<li>".$option->language."</li>";
 			}
 			echo '</ol>';
 		}		
@@ -1403,11 +1396,6 @@ function symposium_plugin_options() {
 	<th scope="row"><label for="language">Language</label></th> 
 	<td>
 	<?php
-	// Check that languages file exists
-	$xml_dir = WP_PLUGIN_DIR . '/wp-symposium/languages.xml';
-	if (!(file_exists($xml_dir))) {
-		echo '<div class="error"><p>The language file ('.$xml_dir.') cannot be found.</p></div>';
-	}
 
 	// Check that languages have been loaded
 	$language_count = $wpdb->get_var("SELECT COUNT(*) FROM ".$wpdb->prefix.'symposium_lang');
