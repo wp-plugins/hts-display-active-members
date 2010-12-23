@@ -192,16 +192,25 @@ Tested with PHP 5.
 
 When upgrading manually, make sure you deactivate and re-activate the core plugin.
 
-*Adding Forum*
+*Adding WP Symposium plugins to your site*
 
-If you need to, create a new page in WordPress (Pages->Add New).
-Put the following in a WordPress page (it's a hyphen, not an underscore):
+If you need to, create a new page in WordPress (Pages->Add New). Then put the following in a WordPress page (it's a hyphen, not an underscore):
+
+For the Forum:
 
   `[symposium-forum]`
+  
+For the Member Profile:
+  
   `[symposium-profile]`
+  
+For the Mail/Private Messaging:
+  
   `[symposium-mail]`
   
 Installation of the notification bar is just a matter of activating it.
+
+IMPORTANT: Update settings on the Options page.
 
 == Screenshots ==
 
