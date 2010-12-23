@@ -406,7 +406,7 @@ function symposium_mail() {
 		
 	} else {
 		// Not logged in
-		$html .= "You have to <a href=".wp_login_url( get_permalink() )." class='simplemodal-login' title='Login'>login</a>, to view your mail.<br />";
+		$html .= "You have to <a href=".wp_login_url( get_permalink() )." class='simplemodal-login' title='Login'>login</a>, to access mail.<br />";
 	}
 	
 	// Send HTML

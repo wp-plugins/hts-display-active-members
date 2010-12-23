@@ -68,7 +68,7 @@ function symposium_profile()
 				$html .= "<div width: 100%;'>";
 
 					// Send mail
-					if ($uid != $current_user->ID) {
+					if ( ($uid != $current_user->ID) && (is_user_logged_in()) ) {
 						$html .='<input type="button" value="Send Mail" class="button" onclick="document.location = \''.$mail_url.'?view=compose&to='.$uid.'\';">';
 					}
 
