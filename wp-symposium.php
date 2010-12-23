@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: WP Symposium Core
+Plugin Name: WP Symposium
 Plugin URI: http://www.wpsymposium.com
 Description: Core code for Symposium, this plugin must always be activated, before any other Symposium plugins/widgets (they rely upon it).
 Version: 0.1.16
