@@ -22,7 +22,7 @@ Currently the forum is well developed, and the mail and notification bar have bo
 
 **WP SYMPOSIUM FEATURES**
 
-*plugins*
+*Plugins*
 
 * Member Profile
 * Notification Bar
