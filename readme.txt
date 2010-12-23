@@ -30,25 +30,23 @@ Currently the forum is well developed, and the mail and notification bar have bo
 * Mail/Private Messaging
 * Friends (not yet available)
 * Wall (not yet available)
-* ...more to come!!!
+* ... more to come!!!
 
 *Widgets*
 
 * Latest Forum Posts
-* ...more to come!!!
+* ... more to come!!!
 
 *Configuration*
 
 * Works with any WordPress theme, and standard WordPress users
 * Optional moderation of new topics/replies
-* Limit viewing of forum to particular user levels
 * Set width of forum in % or pixels
 * Supports all permalink, and default no-permalink settings
 * Supports '.html on PAGES' plugin
 * Supports 'SimpleModal Login' plugin
 * No need to edit stylesheet
 * Health Check page to help with maintenance
-* View all topics on the forum, with delete/approve option
 * Full audit trail and event log (note, minimum event/error logging at the moment, next patch will add full logging)
 
 *Appearance/Styles*
@@ -89,13 +87,23 @@ The Member profile does not yet include all the functionality to form a useful p
 
 Put `[symposium-profile]` on any WP page, and put the page URL in the Symposium options.
 
+* Displays member photo (as set via WordPress)
+* Send Mail to member (if on another member's page)
+* ... many more features to be added to this plugin!
+
 **NOTIFICATION BAR**
 
-The notificat bar, if activated, can be placed at the bottom or top of every webpage. It shows a custom message to the left, and a login/logout link to the right.
+The notification bar, if activated, can be placed at the bottom or top of every webpage. It shows a custom message to the left, and a login/logout link to the right.
 
 However, when a member is logged in and a new mail arrives, an alert is shown to the right instead of the logout link for a short period of time. Optionally, an alert sound (from a list available, defaulting to a subtle chime) is played.
 
 Simply activate the plugin to use the notification bar.
+
+* Place at top or bottom of page
+* Change message to left of the bar
+* Shows login/logout link to the right of the bar
+* When logged in alerts show to the right of new mail
+* Plays a sound when alerts show (optional)
 
 **MAIL**
 
@@ -105,6 +113,16 @@ This will shortly be improved so that multiple recipients can be added. Furtherm
 
 Put `[symposium-mail]` on any WP page, and put the page URL in the Symposium options.
 
+* In Box
+* Sent 'box'
+* Compose new message
+* Delete message
+* Reply to message
+* Simple layout
+* AJAX enabled when switching between messages
+* In Box messages highlighted when not read
+* Sent messages highlighted that not read by recipient
+
 **FORUM**
 
 *Overview*
@@ -112,6 +130,11 @@ Put `[symposium-mail]` on any WP page, and put the page URL in the Symposium opt
 The goal of the forum is to be simple and as uncluttered as possible, whilst having powerful features within.
 
 Put `[symposium-forum]` on any WP page, and put the page URL in the Symposium options.
+
+*Settings*
+
+* Limit viewing of forum to particular user levels
+* View all topics on the forum, with delete/approve option
 
 *Categories*
 
