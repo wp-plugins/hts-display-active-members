@@ -77,6 +77,8 @@ function symposium_forum() {
 	if (!$language) {
 		
 		$html .= "<p>Language translation not available for [".$language_key."] - try setting the language on the Options page.</p>";
+		
+		// Rest to English
 		$language_count = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM ".$wpdb->prefix . 'symposium_lang'));
 		$html .= "<p>".$language_count." languages available:</p>";
 		$language_options = $wpdb->get_results("SELECT DISTINCT language FROM ".$wpdb->prefix.'symposium_lang');
@@ -86,6 +88,17 @@ function symposium_forum() {
 				$html .= $option->language."<br />";
 			}
 		}		
+		
+		$html .= "</p><p>Resetting to English for now...</p>";
+		$sql = "ALTER TABLE ".$wpdb->prefix."symposium_config MODIFY COLUMN language varchar(64) NOT NULL DEFAULT 'English'";
+		if ($wpdb->query($sql) ) {
+			$html .= "<p>Modified the field to the correct structure.</p>";
+		}
+	    if ($wpdb->query( $wpdb->prepare("UPDATE ".$wpdb->prefix."symposium_config SET language = 'English'") ) ) {
+	    	$html.= "<p>Done, hopefully that's sorted it. Try re-loading the page.</p>";
+	    } else {
+	    	$html.= "<p>Eeek - couldn't even do that. :( Try de-activing and re-activating the core plugin.</p>";
+	    }
 
 		
 	} else {
