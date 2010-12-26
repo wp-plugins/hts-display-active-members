@@ -34,6 +34,7 @@ Currently the forum is well developed, and the mail and notification bar have bo
 
 *Widgets*
 
+* Recent New Members
 * Latest Forum Posts
 * ... more to come!!!
 
