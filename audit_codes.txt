@@ -1,0 +1,25 @@
+1 = core activation
+2 = core deactivation
+3 = xml file found, failed to load
+4 = xml file not found
+5 = forum activation
+6 = forum deactivation
+7 = audit cleared
+8 = audit failed to clear
+9 = curl failed
+11 = test audit trail post
+12 = curl 
+13 = audit post failed
+15 = test AJAX post
+20 = Language
+21 = Alter table command
+22 = Trying to change language field
+
+FORUM
+50 = New topic
+51 = New topic reply
+52 = Topic/reply updated
+53 = deleted post
+54 = failed to delete post
+55 = approved post
+56 = failed to approve post
