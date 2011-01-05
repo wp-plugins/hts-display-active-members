@@ -15,14 +15,15 @@
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+include_once('../../../wp-config.php');
+include_once('../../../wp-includes/wp-db.php');
+include_once('symposium_functions.php');
+
+global $wpdb, $current_user;
+wp_get_current_user();
+	
 if (is_user_logged_in()) {
 
-	include_once('../../../wp-config.php');
-	include_once('../../../wp-includes/wp-db.php');
-	include_once('symposium_functions.php');
-	
-	global $wpdb;
-	
 	$users = $wpdb->prefix . 'users';
 	$config = $wpdb->prefix . 'symposium_config';
 	$topics = $wpdb->prefix . 'symposium_topics';
